@@ -15,7 +15,7 @@ public class DigitalSignature {
         sig.initSign(keyPair.getPrivate());
         sig.update(data);
         
-		byte[] signatureBytes = sig.sign();
+	byte[] signatureBytes = sig.sign();
         System.out.println("Signature:" + new BASE64Encoder().encode(signatureBytes));
         sig.initVerify(keyPair.getPublic());
         sig.update(data);
